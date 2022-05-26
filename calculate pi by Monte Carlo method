@@ -1,0 +1,16 @@
+function calpi1(n :: Integer)
+    x = rand(n)
+    y = rand(n)
+    print("pi is ")
+    println(4sum(gauss.(-(x.^2 .+ y.^2) .+ 1))/n)
+    println("(by Monte Carlo method)")
+    return 0
+end
+
+function gauss(n)
+    if n > 0
+        return 1
+    else
+        return 0
+    end
+end
